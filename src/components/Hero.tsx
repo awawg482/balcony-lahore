@@ -1,5 +1,4 @@
 import { Phone, Clock, MapPin } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToMenu = () => {
@@ -7,19 +6,18 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-[hsl(220,80%,15%)]">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_hsl(32,95%,52%,0.15),_transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_hsl(220,70%,40%,0.3),_transparent_50%)]" />
+      </div>
       
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-overlay" />
-      
-      {/* Decorative Elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 border border-accent/20 rounded-full animate-float opacity-50" />
-      <div className="absolute bottom-20 right-20 w-48 h-48 border border-accent/10 rounded-full animate-float opacity-30" style={{ animationDelay: '1s' }} />
+      {/* Decorative Floating Elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 border-2 border-accent/30 rounded-full animate-float" />
+      <div className="absolute top-40 right-20 w-20 h-20 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute bottom-32 left-1/4 w-16 h-16 border border-white/10 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-accent/5 rounded-full animate-float" style={{ animationDelay: '1.5s' }} />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
